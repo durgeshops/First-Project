@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense & Budget Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1><i class="fa-solid fa-wallet"></i> Expense Tracker</h1>
+            <p>Manage your finances smartly</p>
+        </header>
+
+        <!-- Balance Dashboard -->
+        <div class="balance-card">
+            <h3>Total Balance</h3>
+            <h2 id="net-balance">₹0.00</h2>
+            <div class="summary-row">
+                <div class="income-box">
+                    <p>Income</p>
+                    <h4 id="total-income">₹0.00</h4>
+                </div>
+                <div class="expense-box">
+                    <p>Expense</p>
+                    <h4 id="total-expense">₹0.00</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transaction Form -->
+        <div class="form-card">
+            <h3>Add New Transaction</h3>
+            <form id="transaction-form">
+                <div class="input-group">
+                    <label for="text">Description</label>
+                    <input type="text" id="text" placeholder="e.g., Pocket Money, Canteen, Books..." required>
+                </div>
+                <div class="input-group">
+                    <label for="amount">Amount (Use - for expense)</label>
+                    <input type="number" id="amount" placeholder="e.g., 500 or -150" required>
+                </div>
+                <button type="submit" class="btn">Add Transaction</button>
+            </form>
+        </div>
+
+        <!-- Transactions History -->
+        <div class="history-card">
+            <h3>History</h3>
+            <ul id="transaction-list" class="list">
+                <!-- Dynamic Items will be appended here -->
+            </ul>
+            <!-- <button type="Delete" class="btn"> Delete Balance</button> -->
+            <button type="button" class="btn" id="delete-balance">
+                Delete Balance
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
